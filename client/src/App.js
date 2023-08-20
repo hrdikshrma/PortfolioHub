@@ -1,4 +1,12 @@
 import profile from './profile.jpg';
+import certificate1 from './LinkedIn-Python Essential.jpg';
+import certificate2 from './Udemy-MIcroservice Certificate.jpg';
+import resume from './Sayantan Kundu_Technology Analyst.pdf';
+import transcript1 from './Sayantan_Kundu_MS_Transcript.pdf';
+import transcript2 from './Sayantan_Kundu_btech_Transcript.pdf';
+import certificatePdf1 from './LinkedIn-Python Essential.pdf';
+import certificatePdf2 from './Udemy-MIcroservice Certificate.pdf';
+
 import './styles.css';
 
 function App() {
@@ -6,7 +14,7 @@ function App() {
     <div>
       {/* <!-- Navigation--> */}
       <nav
-        class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+        class="navbar navbar-expand-lg navbar-dark bg-primary-dark fixed-top"
         id="sideNav"
       >
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -62,6 +70,11 @@ function App() {
                 Projects
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#certifications">
+                Certifications
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -76,7 +89,9 @@ function App() {
             </h1>
             <div class="subheading mb-5">
               38, Hunt Club Drive · Collegeville, PA 19426 · (610) 787-4040 ·
-              <a href="mailto:name@email.com">sayantan.kundu@temple.edu</a>
+              <a href="mailto:sayantan.kundu@temple.edu">
+                sayantan.kundu@temple.edu
+              </a>
             </div>
             <p class="lead mb-5">
               Results-driven Technology Analyst with 4.5 years of experience in
@@ -93,20 +108,37 @@ function App() {
               <a
                 class="social-icon"
                 href="https://www.linkedin.com/in/sayantan-kundu-sk1611/"
+                target="_blank"
               >
                 <i class="fab fa-linkedin-in"></i>
               </a>
-              <a class="social-icon" href="https://github.com/sayantan16">
+              <a
+                class="social-icon"
+                href="https://github.com/sayantan16"
+                target="_blank"
+              >
                 <i class="fab fa-github"></i>
               </a>
-              <a class="social-icon" href="https://www.npmjs.com/~sayantan16">
+              <a
+                class="social-icon"
+                href="https://www.npmjs.com/~sayantan16"
+                target="_blank"
+              >
                 <i class="fab fa-npm"></i>
               </a>
               <a
                 class="social-icon"
                 href="https://www.facebook.com/sayantan.kundu.7/"
+                target="_blank"
               >
                 <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="btn btn-lg btn-outline-warning btn-dark"
+                href={resume}
+                target="_blank"
+              >
+                Download Resume
               </a>
             </div>
           </div>
@@ -297,6 +329,13 @@ function App() {
                 <div class="subheading mb-3">Master of Science(MS)</div>
                 <div>Computer Science</div>
                 <p>GPA: 3.17</p>
+                <a
+                  class="btn btn-outline-warning btn-dark btn-sm"
+                  href={transcript1}
+                  target="_blank"
+                >
+                  Download Transcript
+                </a>
               </div>
               <div class="flex-shrink-0">
                 <span class="text-primary">August 2022 - May 2024</span>
@@ -312,6 +351,13 @@ function App() {
                 </div>
                 <div>Electronics and Communication Engineering</div>
                 <p>GPA: 3.33</p>
+                <a
+                  class="btn btn-outline-warning btn-dark btn-sm"
+                  href={transcript2}
+                  target="_blank"
+                >
+                  Download Transcript
+                </a>
               </div>
               <div class="flex-shrink-0">
                 <span class="text-primary">August 2012 - May 2016</span>
@@ -325,71 +371,400 @@ function App() {
           <div class="resume-section-content">
             <h2 class="mb-5 text-primary">Skills</h2>
             <div class="subheading mb-3">Programming Languages & Tools</div>
-            <ul class="list-group dev-icons">
-              <li class="list-group-item">
-                <i class="fab fa-html5"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-css3-alt"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-js-square"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-angular"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-react"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-node-js"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-sass"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-less"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-wordpress"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-gulp"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-grunt"></i>
-              </li>
-              <li class="list-group-item">
-                <i class="fab fa-npm"></i>
-              </li>
-            </ul>
-            <div class="subheading mb-3">Workflow</div>
-            <ul class="fa-ul mb-0">
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-check"></i>
-                </span>
-                Mobile-First, Responsive Design
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-check"></i>
-                </span>
-                Cross Browser Testing & Debugging
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-check"></i>
-                </span>
-                Cross Functional Teams
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-check"></i>
-                </span>
-                Agile Development & Scrum
-              </li>
-            </ul>
+            <div class="row" style={{ paddingBottom: '5%' }}>
+              <div class="col-sm-6">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Javascript/NodeJS</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '90%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Python</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '75%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style={{ paddingBottom: '1%' }}>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">ReactJs</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Flask</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">HTML5</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">CSS/Bootstrap</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style={{ paddingBottom: '1%' }}>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Loopback</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Express</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Typescript</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '25%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">NextJS</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '25%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style={{ paddingBottom: '1%' }}>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">RabbitMq</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Node-Red</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Docker</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Kubernetes</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style={{ paddingBottom: '5%' }}>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Unit Testing</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">.NET MVC</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">.NET Web API</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '25%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">REST API</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style={{ paddingBottom: '5%' }}>
+              <div class="col-sm-4">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">MongoDB</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Postgres</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Oracle SQL</h5>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '25%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style={{ paddingBottom: '5%' }}>
+              <div class="col-sm-12">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">
+                      Deep Learning - Tensorlfow
+                    </h5>
+                    <p class="card-text text-center">
+                      1. Regression 2. Classification 3. Transfer Learning 4.
+                      Natural Language Processing 5. Time Series
+                    </p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style={{ width: '50%' }}
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <hr class="m-0" />
@@ -457,59 +832,183 @@ function App() {
         {/* <!-- Projects--> */}
         <section class="resume-section" id="projects">
           <div class="resume-section-content">
-            <h2 class="mb-5 text-primary">Projects & Certifications</h2>
-            <ul class="fa-ul mb-0">
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-trophy text-warning"></i>
-                </span>
-                Google Analytics Certified Developer
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-trophy text-warning"></i>
-                </span>
-                Mobile Web Specialist - Google Certification
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-trophy text-warning"></i>
-                </span>
-                1<sup>st</sup>
-                Place - University of Colorado Boulder - Emerging Tech
-                Competition 2009
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-trophy text-warning"></i>
-                </span>
-                1<sup>st</sup>
-                Place - University of Colorado Boulder - Adobe Creative Jam 2008
-                (UI Design Category)
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-trophy text-warning"></i>
-                </span>
-                2<sup>nd</sup>
-                Place - University of Colorado Boulder - Emerging Tech
-                Competition 2008
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-trophy text-warning"></i>
-                </span>
-                1<sup>st</sup>
-                Place - James Buchanan High School - Hackathon 2006
-              </li>
-              <li>
-                <span class="fa-li">
-                  <i class="fas fa-trophy text-warning"></i>
-                </span>
-                3<sup>rd</sup>
-                Place - James Buchanan High School - Hackathon 2005
-              </li>
-            </ul>
+            <h2 class="mb-5 text-primary">Projects</h2>
+            <div class="card-group" style={{ paddingBottom: '2.5%' }}>
+              <div
+                class="card bg-dark border-warning"
+                style={{ padding: '2.5%' }}
+              >
+                <div class="card-body">
+                  <h5 class="card-title text-center">Photowebsite</h5>
+                  <p class="card-text text-center">
+                    Basic HTML CSS website with interactive bootstrap animations
+                    which acts as a portfolio for photographers. Can accomodate
+                    various tabs, contacts and pricing for images.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <div class="social-icons">
+                    <a
+                      class="social-icon"
+                      href="https://github.com/sayantan16/PhotoWebsite"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card bg-dark border-warning"
+                style={{ padding: '2.5%' }}
+              >
+                <div class="card-body">
+                  <h5 class="card-title text-center">Blog-App</h5>
+                  <p class="card-text text-center">
+                    A basic Microservices example using NodeJS, Typescript,
+                    ReactJs, HTML5 and CSS. It introduces the eventbus system
+                    for handling messaging and events and acts as a template for
+                    microservices. It acts as a blogging webiste where users can
+                    create a post then can create comments on them but one can
+                    also add modification rules and see them in actions. One can
+                    also use it as a template for any social application web
+                    development template.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <div class="social-icons">
+                    <a
+                      class="social-icon"
+                      href="https://github.com/sayantan16/Blog-App"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-group" style={{ padding: '2.5%' }}>
+              <div
+                class="card bg-dark border-warning"
+                style={{ padding: '2.5%' }}
+              >
+                <div class="card-body">
+                  <h5 class="card-title text-center">Ticketing-App</h5>
+                  <p class="card-text text-center">
+                    A more complicated microservice application created using
+                    NodeJS, Typescript with Express framework. Front end created
+                    using ReactJs as template, NextJS as routing framework.
+                    Backend is using MongoDB for data collection and event
+                    storage. Caching is enabled using Redis. Authentication is
+                    done using JWT Authentication. The application is deployed
+                    using Docker and Kubernetes. The deployment and services can
+                    be run at a single instance using Skaffold. It acts as a
+                    sample ticketing website, where users can share tickets of
+                    an event to sell. API for transaction and unit testing is
+                    done as well.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <div class="social-icons">
+                    <a
+                      class="social-icon"
+                      href="https://github.com/sayantan16/Ticketing-App"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card bg-dark border-warning"
+                style={{ padding: '2.5%' }}
+              >
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    Deep-Learning-Tensorflow
+                  </h5>
+                  <p class="card-text text-center">
+                    A project containig all the Google Colab experiments as a
+                    Tensorflow Developer. A deep learning starter and conceptual
+                    project where essentials of tensorflow, along with
+                    Regression and Classification of both Binary and Multi-class
+                    has been shared. Anyone can start and create their own
+                    tensorflow by following this project as steps. It also has a
+                    starter and training for computer vision example where using
+                    tensorflow transfer learning, binary or Multi-class Image
+                    classification is done by training and giving input of real
+                    life images.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <div class="social-icons">
+                    <a
+                      class="social-icon"
+                      href="https://github.com/sayantan16/Deep-Learning-Tensorflow"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr class="m-0" />
+        {/* <!-- Certification--> */}
+        <section class="resume-section" id="certifications">
+          <div class="resume-section-content">
+            <h2 class="mb-5 text-primary">Certifications</h2>
+            <div class="card-group">
+              <div class="card bg-dark" style={{ padding: '2.5%' }}>
+                <img class="card-img-top" src={certificate1} alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    LinkedIn Learning - Python Essential Training
+                  </h5>
+                  <p class="card-text text-center">
+                    Python basic data structures, control flow, functions,
+                    classes, and objects. Handling errors and exceptions, as
+                    well as threads and processes. Plus, different types of
+                    files in Python, command-line arguments to Python script,
+                    and creating modules and packages.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a
+                    href={certificatePdf1}
+                    target="_blank"
+                    class="btn btn-outline-warning btn-dark btn-sm"
+                  >
+                    Download Certificate
+                  </a>
+                </div>
+              </div>
+              <div class="card bg-dark" style={{ padding: '2.5%' }}>
+                <img class="card-img-top" src={certificate2} alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    Udemy - Microservices with Node JS and React
+                  </h5>
+                  <p class="card-text text-center">
+                    Building, deploying, and scaling an E-Commerce app using
+                    Microservices built with Node, React, Docker and Kubernetes.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a
+                    href={certificatePdf2}
+                    target="_blank"
+                    class="btn btn-outline-warning btn-dark btn-sm"
+                  >
+                    Download Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
